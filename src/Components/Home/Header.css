@@ -7,7 +7,8 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #131921;
+    /* background-color: #131921; */
+    background-color:rgb(119, 0, 255);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -23,8 +24,8 @@
 .header__searchIcon{
     padding: 5px;
     height: 22px !important;
-    background-color: #cd9042;
-
+    /* background-color: #cd9042; */
+background-color: rgba(255, 145, 0, 0.753);
 }
 
 .header__search{
@@ -45,7 +46,8 @@
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
-    color: antiquewhite;
+    color: rgba(0, 0, 0, 0.61);
+    font-weight: bolder;
 }
 
 .header__optionLineOne{

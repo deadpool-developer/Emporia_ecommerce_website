@@ -1,0 +1,22 @@
+.grocery{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1500px;
+
+} 
+
+ .grocery__image{
+    width: 100%;
+    z-index: -1;
+    margin-bottom: 20px;
+}
+
+.grocery__row{
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
