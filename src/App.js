@@ -31,12 +31,9 @@ function App() {
         </Route>
 
     <Route path="/contact">
+      <Header/>
       <Contact/>
       </Route>
-
-    {/* <Route path="/login">
-      <Login/>
-    </Route> */}
 
         <Route exact path="/">
           <Header/>

@@ -12,22 +12,20 @@ export default function PaginationLink() {
       <Route>
         {({ location }) => {
           const query = new URLSearchParams(location.search);
-          const page = parseInt(query.get("page") || "1", 3);
+          const page = parseInt(query.get("page") || "1", "2");
           return (
             <Pagination
               className="grocery__pagination"
               page={page}
-              count={3}
+              count={2}
             //   onchange={handlechange}
               color="secondary"
               defaultPage={1}
-              showFirstButton
-              showLastButton
               variant="outlined"
               renderItem={(item) => (
                 <PaginationItem
                   component={Link}
-                  to={`/inbox${item.page === 1 ? "" : `?page=${item.page}`}`}
+                  to={`/inbox${item.page === 1 ? <Grocery2/> : `?page=${item.page}`}`}
                   {...item}
                  
                 />
@@ -39,3 +37,5 @@ export default function PaginationLink() {
     </MemoryRouter>
   );
 }
+
+

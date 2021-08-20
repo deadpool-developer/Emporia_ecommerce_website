@@ -1,23 +1,12 @@
 import React from "react";
-
-import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import "./Contact.css";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-    },
-  },
-}));
-
 const Contact = () => {
-  const classes = useStyles();
   return (
     <>
       <div className="main_div">
-        <h1 className="contact_heading">CONTACT US</h1>
+        <h1 className="contact_heading">CONTACT US</h1><hr/>
         <p className="contact_para">
           Do you have any questions? Please do not hesitate to contact us
           directly. Our team will come back to you within a matter of hours to
