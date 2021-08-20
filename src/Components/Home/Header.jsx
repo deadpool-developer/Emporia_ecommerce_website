@@ -2,6 +2,9 @@ import React from "react";
 import "./Header.css";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+// import {Route, Switch} from "react-router-dom";
+// import { NavLink } from "react-router-dom";
+
 
 function Header() {
   return (
@@ -18,7 +21,9 @@ function Header() {
         width : "100%"
         }}
           className = "header__searchInput"
-          type="text"/>
+          type="text"
+          
+          />
           <SearchIcon className = "header__searchIcon"/>
       </div>
 
@@ -44,7 +49,7 @@ function Header() {
           <span className="header__optionLineOne">
                   Your</span>
                   <span className = "header__optionLineTwo">
-                      Prime
+                    Contact
                   </span>
           </div>
 
@@ -52,8 +57,11 @@ function Header() {
           <ShoppingCartIcon/>
           <span className= "header__optionLineTwo header__basketCount">0</span>
           </div>
-      </div>
+          
     
+      </div>
+
+     
   );
 }
 
