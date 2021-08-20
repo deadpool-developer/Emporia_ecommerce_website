@@ -1,4 +1,7 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
+
+
 function GroceryProduct({id,title,image,price,rating,mrp,size}) {
   return (
     <div className="product">
@@ -6,6 +9,7 @@ function GroceryProduct({id,title,image,price,rating,mrp,size}) {
         src={image}
         alt=""
       />
+      
 
       <div className="product__info">
         <p>{title}</p>
@@ -25,6 +29,10 @@ function GroceryProduct({id,title,image,price,rating,mrp,size}) {
         <p>Price:  <small>₹</small> <strong className = "product__priceColor">{price}  </strong><small>₹</small><span className = "product__mrp">{mrp}</span></p></p>
         
       </div>
+
+      <Button style= {{marginTop : "25px", height:"25px", marginRight:"10px"}} variant="outlined" color="secondary">
+        Add to basket
+      </Button>
 
      
     </div>

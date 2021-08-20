@@ -49,6 +49,7 @@ const Login = () => {
       <div className="Login">
         <img
           src="https://cdn.iconscout.com/icon/free/png-256/amazon-1869030-1583154.png"
+          alt=""
           className="login_Logo"
         />
       </div>
