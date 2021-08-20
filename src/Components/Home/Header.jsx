@@ -2,8 +2,8 @@ import React from "react";
 import "./Header.css";
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import {Route, Switch} from "react-router-dom";
-import { NavLink } from "react-router-dom";
+// import {Route, Switch} from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 
 function Header() {
