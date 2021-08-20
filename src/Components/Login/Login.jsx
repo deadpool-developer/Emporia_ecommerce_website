@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
-/*import {auth} from "./firebase"*/;
+import { auth } from "../../firebase";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,16 +21,37 @@ const Login = () => {
     const[email , setEmail]=useState("");
     const[password ,setPassword]=useState("");
 
-    const signIn=(e)=>
+    /*const signIn=(e)=>
     {
         e.preventDefault();
-    }
+
+        auth
+          .signInWithEmailAndPassword(email,password)
+          .then((auth) =>
+            {
+              history.push('/')
+            })
+
+            .catch(error => alert(error.message))
+    }*/
+
+    const signIn = (e) => {
+      e.preventDefault();
+      //login logic
+      
+        auth.signInWithEmailAndPassword(email, password)
+        .then((auth) => {
+          //logged in ,redirect to homepage
+          history.push("/");
+        })
+        .catch((e) => alert(e.message));
+    };
 
     const register=(e)=>
     {
         e.preventDefault();
-       /* auth
-            .createUserWithEmailAndPassword(email , password)
+          
+            auth.createUserWithEmailAndPassword(email , password)
             .then((auth)=>
             {
                 if(auth)
@@ -40,7 +61,7 @@ const Login = () => {
 
             })
 
-            .catch(error=> alert(error.message))*/
+            .catch(error=> alert(error.message))
     }
 
   const classes = useStyles();
