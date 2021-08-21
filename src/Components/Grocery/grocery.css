@@ -24,5 +24,6 @@
 
 .grocery__pagination{
     margin-top: 10px;
-    margin-left: 40vw;
+    justify-content: center;
+   display: flex;
 }

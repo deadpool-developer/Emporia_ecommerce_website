@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import "./Login.css";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -7,14 +7,14 @@ import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import { auth } from "../../firebase";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    "& > *": {
-      margin: theme.spacing(1),
-      width: "25ch",
-    },
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   root: {
+//     "& > *": {
+//       margin: theme.spacing(1),
+//       width: "25ch",
+//     },
+//   },
+// }));
 
 const Login = () => {
     const history = useHistory();
@@ -64,7 +64,7 @@ const Login = () => {
             .catch(error=> alert(error.message))
     }
 
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <>
       <div className="Login">
