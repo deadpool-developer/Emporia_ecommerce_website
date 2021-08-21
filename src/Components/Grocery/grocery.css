@@ -10,8 +10,9 @@
 
  .grocery__image{
     width: 100%;
-    z-index: -1;
-    margin-bottom: 20px;
+     z-index: -1;
+    margin-bottom: 25px;
+    
 }
 
 .grocery__row{
@@ -19,4 +20,9 @@
     z-index: 1;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.grocery__pagination{
+    margin-top: 10px;
+    margin-left: 40vw;
 }

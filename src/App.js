@@ -8,24 +8,42 @@ import Home from "./Components/Home/Home";
 import Grocery from "./Components/Grocery/grocery";
 import Contact from "./Components/Contact/Contact";
 import Login from "./Components/Login/Login";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Grocery2 from "./Components/Grocery/grocery2";
 
 function App() {
   return (
-    <Router>
+    
+   <BrowserRouter>
       <Switch>
-        <Route exact path="/grocery">
+
+        <Route path="/grocery">
           <Header />
           <Grocery />
         </Route>
 
-        <Route exact path="/checkout">
+        <Route path = "/grocerypage2">
+          <Header/>
+          <Grocery2/>
+        </Route>
+
+        <Route path="/checkout">
           <Header />
           <h1>Hello, checkout</h1>
         </Route>
 
         
+    <Route path="/contact">
+      <Header/>
+      <Contact/>
+      </Route>
+
+        <Route exact path="/">
+          <Header/>
+          <Home/>
+          </Route>
+
         <Route exact path="/contact">
           <Header />
           <Contact />
@@ -56,12 +74,20 @@ function App() {
         </Route>
        
 
+       
+
+       
+
         <Route exact path="/">
           <Header />
           <Home />
         </Route>
-      </Switch>
-    </Router>
+
+        </Switch>
+        </BrowserRouter>
+    
   );
 }
+
+
 export default App;
