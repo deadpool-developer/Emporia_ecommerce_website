@@ -8,52 +8,45 @@ import Login from "./Components/Login/Login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Grocery2 from "./Components/Grocery/grocery2";
+import Checkout from "./Components/Checkout/Checkout";
 
 function App() {
   return (
     <Router>
-
+<Header/>
       <Switch>
 
         <Route path="/grocery">
-          <Header />
           <Grocery />
         </Route>
 
         <Route path = "/grocerypage2">
-          <Header/>
           <Grocery2/>
         </Route>
 
         <Route path="/checkout">
-          <Header />
-          <h1>Hello, checkout</h1>
+          <Checkout/>
         </Route>
 
     <Route path="/contact">
-      <Header/>
       <Contact/>
       </Route>
 
         <Route exact path="/">
-          <Header/>
           <Home/>
           </Route>
 
         <Route exact path="/contact">
-          <Header />
           <Contact />
         </Route>
 
         <Route exact path="/login">
-          <Header />
           <Login />
         </Route>
 
         <Route component={Error} />
 
         <Route path="/">
-          <Header />
           <Home />
         </Route>
 

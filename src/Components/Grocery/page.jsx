@@ -1,10 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 function Pagination() {
-    return(
-        <h1>hello</h1>
-    );
-};
+  return (
+<div className = "grocery__pagination">
+          <Link to = "/grocery">
+          <Button variant="contained"
+          color="primary"
+          size="small" 
+          style={{ marginRight: "10px" }}>1</Button>
+          </Link>
+           
+           <Link to ="/grocerypage2">
+           <Button variant="contained"
+          color="primary"
+          size="small">2 </Button>
+           </Link>
+          </div>
+  );
+}
 
 export default Pagination;
