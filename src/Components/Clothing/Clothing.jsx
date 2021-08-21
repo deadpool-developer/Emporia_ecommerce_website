@@ -215,7 +215,7 @@ const Clothing = () => {
             backgroundColor: "blue",
           }}
         >
-          <NavLink to="./Clothing2">1</NavLink>
+          <NavLink to="./clothing2">1</NavLink>
         </button>
         <button
           style={{
@@ -225,7 +225,7 @@ const Clothing = () => {
             backgroundColor: "blue",
           }}
         >
-           <NavLink to="./Clothing2">2</NavLink>
+           <NavLink to="./clothing2">2</NavLink>
         </button>
         <button
           style={{
@@ -235,70 +235,15 @@ const Clothing = () => {
             backgroundColor: "blue",
           }}
         >
-           <NavLink to="./Clothing3">3</NavLink>
+           <NavLink to="./clothing3">3</NavLink>
         </button>
       </div>
 
 
 
 
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHdO96S3XuVnc04fJfNjgBHCj0d8Rn_CPXDVVHf3lXXTUecq1hzGLhjj1P1Y49hVTvNhs&usqp=CAU" class="d-block w-100" alt="xyz" />
-          </div>
-          <div class="carousel-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHdO96S3XuVnc04fJfNjgBHCj0d8Rn_CPXDVVHf3lXXTUecq1hzGLhjj1P1Y49hVTvNhs&usqp=CAU" class="d-block w-100" alt="zyz" />
-          </div>
-          <div class="carousel-item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUTKAHlT7CPCgur_KhxJyk8lzXWAMHg3ehZR8isUR-0g6_2CJ3B9-0fnhJPXRURmjlCwc&usqp=CAU" class="d-block w-100" alt="xax" />
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+        
+      
 
     </>
   );
