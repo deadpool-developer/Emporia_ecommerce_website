@@ -71,6 +71,32 @@ function Home() {
       </div>
 
       
+      <div className="home__row">
+        <Product
+          id="3"
+          mrp={2999}
+          title="Noise Buds VS103 - Truly Wireless Earbuds with 18-Hour Playtime, HyperSync Technology, Full Touch Controls and Voice Assistant (Pearl White)"
+          price={1499}
+          image="https://rukminim1.flixcart.com/image/495/594/kjuby4w0/t-shirt/4/f/7/xl-fc4057-fastcolors-original-imafzbj56yxpkzzh.jpeg?q=50"
+          rating={4}
+        />
+        <Product
+          id="4"
+          mrp={32990}
+          title="realme X7 Pro Fantasy, 8 GB RAM, 128 GB Storage"
+          price={29990}
+          image="https://rukminim1.flixcart.com/image/495/594/kerfl3k0hlty2aw-0/sari/e/m/b/1-5-5m-bandhani-mor-fashion-arriva-fab-original-imaf7yjhudcchnmz.jpeg?q=50"
+          rating={4}
+        />
+        <Product
+          id="5"
+          mrp={1799}
+          title="Redgear Cloak Wired RGB Gaming Headphones with Microphone for PC"
+          price={999}
+          image="https://rukminim1.flixcart.com/image/495/594/knexksw0/dress/i/8/y/xl-fa-kurti-black-maroon-r-taze-original-imag23fhbx2pwzhr.jpeg?q=50"
+          rating={4}
+        />
+      </div>
     </div>
   );
 }
