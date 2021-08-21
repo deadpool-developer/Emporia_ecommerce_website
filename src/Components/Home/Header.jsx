@@ -26,14 +26,37 @@ function Header() {
         />
         <SearchIcon className="header__searchIcon" />
       </div>
+
+
 <Link to="/login">
       <div className="header__nav">
-        <div className="header__option">
-          <span className="header__optionLineOne">Hello Guest</span>
-          <span className="header__optionLineTwo">Sign In</span>
-        </div>
-      </div>
-      </Link>
+          <div className="header__option">
+              <span className="header__optionLineOne">
+                  Hello Guest</span>
+                  <span className = "header__optionLineTwo">
+                  <span style={{color:"black"}}>Sign In</span>
+                  </span>
+              </div>
+          </div>
+</Link>
+
+          <div className="header__option">
+          <span className="header__optionLineOne">
+          
+                  Returns </span>
+                  <span className = "header__optionLineTwo">
+                  <NavLink to="./"> <span style={{color:"black"}}>& Orders</span>
+                      </NavLink>
+                  </span>
+          </div>
+
+          <div className="header__option">
+          <span className="header__optionLineOne">
+                  Your</span>
+                  <span className = "header__optionLineTwo">
+                   <NavLink to="./contact"><span style={{color:"black"}}>Contact</span></NavLink> 
+                  </span>
+          </div>
 
       <div className="header__option">
         <span className="header__optionLineOne">Returns </span>
@@ -53,7 +76,9 @@ function Header() {
           <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
         </div>
       </Link>
+      
     </div>
+    
   );
 }
 
