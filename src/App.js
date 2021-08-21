@@ -3,11 +3,14 @@ import Header from "./Components/Home/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Components/Home/Home";
 import Grocery from "./Components/Grocery/grocery";
+import Gadgets from "./Components/Gadgets/gadgets";
+import Furniture from "./Components/Furniture/furniture";
 import Contact from "./Components/Contact/Contact";
 import Login from "./Components/Login/Login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Grocery2 from "./Components/Grocery/grocery2";
+
 
 function App() {
   return (
@@ -25,6 +28,16 @@ function App() {
           <Grocery2/>
         </Route>
 
+        <Route path="/gadgets">
+          <Header />
+          <Gadgets />
+        </Route>
+
+        <Route path="/furniture">
+          <Header />
+          <Furniture />
+        </Route>
+
         <Route path="/checkout">
           <Header />
           <h1>Hello, checkout</h1>
@@ -38,7 +51,7 @@ function App() {
       <Login/>
     </Route> */}
 
-        <Route exact path="/">
+        <Route exact path="/home">
           <Header/>
           <Home/>
           </Route>
