@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Components/Home/Header";
-
+import Clothing from "./Components/Clothing/Clothing";
+import Clothing2 from "./Components/Clothing/Clothing2";
+import Clothing3 from "./Components/Clothing/Clothing3";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Components/Home/Home";
 import Grocery from "./Components/Grocery/grocery";
@@ -23,17 +25,38 @@ function App() {
           <h1>Hello, checkout</h1>
         </Route>
 
-        <Route exact path="/" component={Header} />
+        
         <Route exact path="/contact">
           <Header />
           <Contact />
         </Route>
+
+        
+
+        <Route exact path="/clothing">
+          <Header />
+          <Clothing/>
+        </Route>
+
+        
+        <Route exact path="/clothing2">
+          <Header />
+          <Clothing2/>
+        </Route>
+
+        
+        <Route exact path="/clothing3">
+          <Header />
+          <Clothing3/>
+        </Route>
+
         <Route exact path="/login">
           <Header />
           <Login />
         </Route>
-        <Route component={Error} />
-        <Route path="/">
+       
+
+        <Route exact path="/">
           <Header />
           <Home />
         </Route>
