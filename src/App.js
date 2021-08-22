@@ -18,7 +18,7 @@ import Checkout from "./Components/Checkout/Checkout";
 
 function App() {
   return (
-    <Router>
+    <Router >
 <Header/>
       <Switch>
 

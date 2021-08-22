@@ -1,8 +1,8 @@
 import React from "react";
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Favorite from '@material-ui/icons/Favorite';
-import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
+// import Checkbox from '@material-ui/core/Checkbox';
+// import Favorite from '@material-ui/icons/Favorite';
+// import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import Button from '@material-ui/core/Button';
 import { useStateValue } from "../../StateProvider";
 
@@ -24,12 +24,12 @@ function ClothingProduct({id,title,image,price,rating,mrp,size}) {
     <div className="product">
 <div style={{marginLeft:"280px"}}>
 
-<FormControlLabel
+{/* <FormControlLabel
         control={<Checkbox icon={<FavoriteBorder />} 
                   checkedIcon={<Favorite />}
           name="checkedH"/>}
           
-      />
+      /> */}
 
 </div>
          <img

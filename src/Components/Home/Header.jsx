@@ -1,10 +1,11 @@
 import React from "react";
 import "./Header.css";
 import SearchIcon from "@material-ui/icons/Search";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import Category from "./Category";
+
 
 
 
@@ -15,7 +16,8 @@ function Header() {
       <Link to="/">
         <img
           className="header_logo"
-         src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+        //  src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+        src={"./logo2.png"}
           alt="nothing to show"
         />
       </Link>
@@ -46,16 +48,6 @@ function Header() {
           </div>
 </Link>
 
-          {/* <div className="header__option">
-          <span className="header__optionLineOne">
-          
-                  Returns </span>
-                  <span className = "header__optionLineTwo">
-                   <span style={{color:"black"}}>& Orders</span>
-                      
-                  </span>
-          </div> */}
-
       
 
 <Link to="/contact" style={{textDecoration:"none"}}>
@@ -65,10 +57,18 @@ function Header() {
       </div>
 </Link>
 
-      <Link to="/checkout">
+      <Link to="/checkout" style={{textDecoration:"none"}}>
         <div className="header__optionBasket">
-          <ShoppingCartIcon />
-          <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
+        <div className="header__option">
+        
+        <span className="header__optionLineTwo header__basketCount header__optionLineOne " style={{color:"white",marginTop:"-10px"}}>{basket?.length}</span>
+        <ShoppingCartOutlinedIcon  />
+
+      </div>
+
+<div className="header__option">
+<small className="header__optionLineTwo" style={{marginLeft:"-20px",marginTop:"10px"}}>Cart</small>
+</div>
         </div>
       </Link>
       

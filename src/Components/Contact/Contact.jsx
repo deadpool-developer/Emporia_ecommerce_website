@@ -3,12 +3,14 @@ import Button from "@material-ui/core/Button";
 import "./Contact.css";
 import myFunction from "./Alert";
 
+
 const Contact = () => {
  
   return (
     <>
       <div className="main_div">
-        <h1 className="contact_heading">CONTACT US</h1><hr/>
+       
+        <h1 className="contact_heading">CONTACT US</h1>
         <p className="contact_para">
           Do you have any questions? Please do not hesitate to contact us
           directly. Our team will come back to you within a matter of hours to
@@ -117,11 +119,10 @@ const Contact = () => {
           <div class="mb-3">
             <Button
               variant="contained"
-              color="primary"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
               title="Submit"
-              style={{ textAlign: "center", marginLeft: "240px" }}
+              style={{ textAlign: "center", marginLeft: "240px",background:"#cd9042" ,color:"white"}}
               onClick= {myFunction}
             >
               Submit
