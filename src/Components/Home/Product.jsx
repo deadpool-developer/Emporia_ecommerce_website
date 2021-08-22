@@ -22,6 +22,7 @@ function Product({id,title,image,price,rating,mrp}) {
         src={image}
         alt=""
       />
+      
     </div>
   );
 }

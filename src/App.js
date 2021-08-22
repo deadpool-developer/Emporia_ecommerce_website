@@ -10,7 +10,7 @@ import Gadgets from "./Components/Gadgets/gadgets";
 import Furniture from "./Components/Furniture/furniture";
 import Contact from "./Components/Contact/Contact";
 import Login from "./Components/Login/Login";
-import { BrowserRouter as  Switch, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Grocery2 from "./Components/Grocery/grocery2";
 import Checkout from "./Components/Checkout/Checkout";
@@ -18,9 +18,8 @@ import Checkout from "./Components/Checkout/Checkout";
 
 function App() {
   return (
-    
-   <BrowserRouter>
-     <Header/>
+    <Router>
+<Header/>
       <Switch>
 
         <Route path="/grocery">
@@ -32,12 +31,12 @@ function App() {
         </Route>
 
         <Route path="/gadgets">
-        
+         
           <Gadgets />
         </Route>
 
         <Route path="/furniture">
-        
+          
           <Furniture />
         </Route>
 
@@ -46,25 +45,28 @@ function App() {
         </Route>
 
         
-    <Route path="/contact">
-      <Contact/>
-      </Route>
+   
+
+
+        <Route exact path="/contact">
+          <Contact />
+        </Route>
 
         
 
-        <Route path="/clothing">
-          
+        <Route exact path="/clothing">
+         
           <Clothing/>
         </Route>
 
         
-        <Route path="/clothing2">
+        <Route exact path="/clothing2">
           
           <Clothing2/>
         </Route>
 
         
-        <Route path="/clothing3">
+        <Route exact path="/clothing3">
           
           <Clothing3/>
         </Route>
@@ -79,12 +81,11 @@ function App() {
        
 
         <Route path="/">
-        
           <Home />
         </Route>
 
         </Switch>
-        </BrowserRouter>
+        </Router>
     
   );
 }

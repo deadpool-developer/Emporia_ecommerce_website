@@ -4,10 +4,21 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
+import { auth } from "./firebase";
+import Category from "./Category";
+
 
 
 function Header() {
-  const [{basket}] = useStateValue();
+  const [{ basket, user }] = useStateValue();
+
+  const handleAuthenticaton = () => {
+    if (user) {
+      auth.signOut();
+    }
+  }
+
+
   return (
     <div className="header">
       <Link to="/">
@@ -17,6 +28,7 @@ function Header() {
           alt="nothing to show"
         />
       </Link>
+      
 
       <div className="header__search">
         <input
@@ -27,28 +39,31 @@ function Header() {
         <SearchIcon className="header__searchIcon" />
       </div>
 
-
-<Link to="/login">
       <div className="header__nav">
-          <div className="header__option">
-              <span className="header__optionLineOne">
-                  Hello Guest</span>
-                  <span className = "header__optionLineTwo">
-                  <span style={{color:"black"}}>Sign In</span>
-                  </span>
-              </div>
+        <Link to={!user && '/login'}>
+          <div onClick={handleAuthenticaton} className="header__option">
+            <span className="header__optionLineOne">Hello {!user ? 'Guest' : user.email}</span>
+            <span className="header__optionLineTwo">{user ? 'Sign Out' : 'Sign In'}</span>
           </div>
-</Link>
+        </Link>
+       
 
-          <div className="header__option">
+
+
+
+
+         {/* <div className="header__option">
           <span className="header__optionLineOne">
           
                   Returns </span>
                   <span className = "header__optionLineTwo">
                   <Link to="./"> <span style={{color:"black"}}>& Orders</span>
                       </Link>
-                  </span>
-          </div>
+                      <span style={{color:"black"}}>& Orders</span>
+                      </span>
+          </div> */}
+
+        
 
           <div className="header__option">
           <span className="header__optionLineOne">
@@ -57,13 +72,15 @@ function Header() {
                    <Link to="./contact"><span style={{color:"black"}}>Contact</span></Link> 
                   </span>
           </div>
-
+    
       <div className="header__option">
         <span className="header__optionLineOne">Returns </span>
         <span className="header__optionLineTwo">& Orders</span>
       </div>
+    
+  
 
-<Link to="/contact">
+<Link to="/contact"  style={{textDecoration:"none"}}>
       <div className="header__option">
         <span className="header__optionLineOne">Contact</span>
         <span className="header__optionLineTwo">US</span>
@@ -77,6 +94,7 @@ function Header() {
         </div>
       </Link>
       
+    </div>
     </div>
     
   );

@@ -1,52 +1,50 @@
 import React from "react";
-
 import TemporaryDrawer from "./Drawer";
 import ClothingProduct from "./ClothingProduct";
-import {NavLink} from "react-router-dom";
-
+import PaginationFashion from "./pages";
 
 const Clothing = () => {
   return (
     <>
       <TemporaryDrawer />
 
-     
       <div className="grocery__row">
         <ClothingProduct
           id="1324324"
-          title="T-neck White Collar T-shirt"
+          title="Loose jeans"
           size="1 Piece"
-          image="https://rukminim1.flixcart.com/image/495/594/kjuby4w0/t-shirt/4/f/7/xl-fc4057-fastcolors-original-imafzbj56yxpkzzh.jpeg?q=50"
+          image="https://rukminim1.flixcart.com/image/495/594/kcnp8y80/jean/h/b/o/32-kd-2000-drk-bll-bollm-joggr-kingdenim-original-imafgahyvtzpyqn3.jpeg?q=50"
           rating={4}
           mrp={195}
-          price={1000}
+          price={500}
+        />
+
+        <ClothingProduct
+          id="1324324"
+          title="Floor touch skirt and top"
+          size="1 Piece"
+          image="https://rukminim1.flixcart.com/image/495/594/kqco5u80/lehenga-choli/p/u/l/free-short-sleeve-3055-mor-for-fab-original-imag4dh6hrmyd6fd.jpeg?q=50"
+          rating={4}
+          mrp={195}
+          price={3050}
         />
         <ClothingProduct
           id="1324324"
-          title=" Striped Men Round neck t-shirt"
+          title="White Boat neck top with skirt"
           size="1 Piece"
-          image="https://rukminim1.flixcart.com/image/495/594/kjiwfbk0-0/t-shirt/n/d/q/xs-t305-as10rdblwh-seven-rocks-original-imafz2qedu5zqvas.jpeg?q=50"
+          image="https://rukminim1.flixcart.com/image/495/594/keokpe80/lehenga-choli/z/4/7/free-sleeveless-white-moti-lehenga-ramkrupa-creation-original-imafvbbtf2rzbwyv.jpeg?q=50"
           rating={4}
           mrp={195}
-          price={1350}
+          price={4500}
         />
         <ClothingProduct
           id="1324324"
-          title="Printed Men t-shirt"
+          title="WestCoastOn Women's Silk Blend Semi-Stitched Lehenga Choli"
           size="1 Piece"
-          image="https://rukminim1.flixcart.com/image/495/594/km2clu80/shirt/q/n/z/s-hlsh012458-highlander-original-imagffwykgv4gxfz.jpeg?q=50"
+          image="https://rukminim1.flixcart.com/image/495/594/khtghow0-0/lehenga-choli/f/c/h/free-half-sleeve-kiyara-kedar-fab-original-imafxqtxcqe3zkyv.jpeg?q=50"
           rating={4}
           mrp={195}
-          price={1400}
-        />
-        <ClothingProduct
-          id="1324324"
-          title="Two color Hoodie"
-          size="1 Piece"
-          image="https://rukminim1.flixcart.com/image/495/594/kflftzk0-0/t-shirt/p/d/v/l-hm-1001-mustard-black-helmont-original-imafwyfb2tqmjdhw.jpeg?q=50"
-          rating={4}
-          mrp={195}
-          price={1200}
+          price={5000}
         />
       </div>
 
@@ -131,39 +129,39 @@ const Clothing = () => {
       <div className="grocery__row">
         <ClothingProduct
           id="1324324"
-          title="Kids inner wear"
-          size="5 Piece"
-          image="https://rukminim1.flixcart.com/image/495/594/kolsscw0/kids-short/6/b/j/8-9-years-meenamma-kathir-merun-green-combo-5-pcs-fashionate-original-imag3ffz7jpfszzg.jpeg?q=50"
-          rating={4}
-          mrp={195}
-          price={1900}
-        />
-        <ClothingProduct
-          id="1324324"
-          title="Kurta"
+          title="Blue short Shrug"
           size="1 Piece"
-          image="https://rukminim1.flixcart.com/image/495/594/jvv9zm80/kids-ethnic-set/b/v/t/2-3-years-digibc001-digimart-original-imafggkydgvztb2k.jpeg?q=50"
+          image="https://rukminim1.flixcart.com/image/495/594/kqidx8w0/shrug/b/2/p/xl-wsg5104-in-love-original-imag4gftrkexuvge.jpeg?q=50"
           rating={4}
           mrp={195}
-          price={1400}
+          price={300}
         />
         <ClothingProduct
           id="1324324"
-          title="Printed Girls 3-P Frock"
-          size="4 Piece"
-          image="https://rukminim1.flixcart.com/image/495/594/kesv0y80/kids-dress/n/q/h/4-5-years-cotton-kids-jhabla-girls-frocks-sonia-collection-original-imafvdsmxc66h5xg.jpeg?q=50"
-          rating={4}
-          mrp={195}
-          price={1230}
-        />
-        <ClothingProduct
-          id="1324324"
-          title="Dhoti kurta"
+          title="Light floral print Shrug"
           size="1 Piece"
-          image="https://rukminim1.flixcart.com/image/495/594/kbmjssw0/kids-ethnic-set/y/g/z/12-18-months-stc-krishna001-evaan-enterprises-original-imafswuw66ykjhev.jpeg?q=50"
+          image="https://rukminim1.flixcart.com/image/495/594/jrwdyfk0/shrug/n/t/2/s-ser-e-18-serein-original-imafdhez4btp2kxx.jpeg?q=50"
           rating={4}
           mrp={195}
-          price={800}
+          price={480}
+        />
+        <ClothingProduct
+          id="1324324"
+          title="Magenta color short shrug"
+          size="1 Piece"
+          image="https://rukminim1.flixcart.com/image/495/594/kk01pjk0/shrug/6/q/h/m-shrug-swiftly-original-imafzg7zgudh3ksr.jpeg?q=50"
+          rating={4}
+          mrp={195}
+          price={550}
+        />
+        <ClothingProduct
+          id="1324324"
+          title="Coat style shrug with for collar"
+          size="1 Piece"
+          image="https://rukminim1.flixcart.com/image/495/594/kj61gnk0-0/shrug/t/5/v/xl-fur-shurg-for-women-green-moshe-original-imafyskghuf7dzch.jpeg?q=50"
+          rating={4}
+          mrp={195}
+          price={999}
         />
       </div>
 
@@ -206,45 +204,37 @@ const Clothing = () => {
         />
       </div>
 
-      <div>
-        <button
-          style={{
-            textAlign: "center",
-            height: "20px",
-            width: "20px",
-            backgroundColor: "blue",
-          }}
-        >
-          <NavLink to="./clothing2">1</NavLink>
-        </button>
-        <button
-          style={{
-            textAlign: "center",
-            height: "20px",
-            width: "20px",
-            backgroundColor: "blue",
-          }}
-        >
-           <NavLink to="./clothing2">2</NavLink>
-        </button>
-        <button
-          style={{
-            textAlign: "center",
-            height: "20px",
-            width: "20px",
-            backgroundColor: "blue",
-          }}
-        >
-           <NavLink to="./clothing3">3</NavLink>
-        </button>
+      <div className="grocery__row">
+        <ClothingProduct
+          id="1324324"
+          title="Dotted pattern Lehnga"
+          size="1 Piece"
+          image="https://rukminim1.flixcart.com/image/495/594/jz8qf0w0/lehenga-choli/8/f/y/free-bindu-pink-thakar-creation-original-imafjayyunagqmzg.jpeg?q=50"
+          rating={4}
+          mrp={195}
+          price={6000}
+        />
+        <ClothingProduct
+          id="1324324"
+          title="Saree Lehnga"
+          size="1 Piece"
+          image="https://rukminim1.flixcart.com/image/495/594/k3erngw0/fabric/s/h/w/k5a-owee-original-imaeyhfm9xhnkdem.jpeg?q=50"
+          rating={4}
+          mrp={195}
+          price={5999}
+        />
+        <ClothingProduct
+          id="1324324"
+          title="Off shoulder top with skirt"
+          size="1 Piece"
+          image="https://rukminim1.flixcart.com/image/495/594/kk1h5e80/lehenga-choli/g/0/1/free-sleeveless-madhav-sky-blue-lehenga-choli-vm-tejani-original-imafzh65mstghmqt.jpeg?q=50"
+          rating={4}
+          mrp={195}
+          price={1500}
+        />
       </div>
 
-
-
-
-        
-      
-
+      <PaginationFashion />
     </>
   );
 };
