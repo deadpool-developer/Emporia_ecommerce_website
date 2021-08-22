@@ -7,7 +7,7 @@ import { useStateValue } from "../../StateProvider";
 
 
 function Header() {
-  const [{basket}, dispatch] = useStateValue();
+  const [{basket}] = useStateValue();
   return (
     <div className="header">
       <Link to="/">
@@ -45,8 +45,8 @@ function Header() {
           
                   Returns </span>
                   <span className = "header__optionLineTwo">
-                  <NavLink to="./"> <span style={{color:"black"}}>& Orders</span>
-                      </NavLink>
+                  <Link to="./"> <span style={{color:"black"}}>& Orders</span>
+                      </Link>
                   </span>
           </div>
 
@@ -54,7 +54,7 @@ function Header() {
           <span className="header__optionLineOne">
                   Your</span>
                   <span className = "header__optionLineTwo">
-                   <NavLink to="./contact"><span style={{color:"black"}}>Contact</span></NavLink> 
+                   <Link to="./contact"><span style={{color:"black"}}>Contact</span></Link> 
                   </span>
           </div>
 

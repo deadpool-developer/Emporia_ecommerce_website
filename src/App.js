@@ -20,6 +20,7 @@ function App() {
   return (
     
    <BrowserRouter>
+     <Header/>
       <Switch>
 
         <Route path="/grocery">
@@ -31,12 +32,12 @@ function App() {
         </Route>
 
         <Route path="/gadgets">
-          <Header />
+        
           <Gadgets />
         </Route>
 
         <Route path="/furniture">
-          <Header />
+        
           <Furniture />
         </Route>
 
@@ -49,34 +50,26 @@ function App() {
       <Contact/>
       </Route>
 
-        <Route exact path="/">
-          <Home/>
-          </Route>
-
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
-
         
 
-        <Route exact path="/clothing">
-          <Header />
+        <Route path="/clothing">
+          
           <Clothing/>
         </Route>
 
         
-        <Route exact path="/clothing2">
-          <Header />
+        <Route path="/clothing2">
+          
           <Clothing2/>
         </Route>
 
         
-        <Route exact path="/clothing3">
-          <Header />
+        <Route path="/clothing3">
+          
           <Clothing3/>
         </Route>
 
-        <Route exact path="/login">
+        <Route path="/login">
           <Login />
         </Route>
        
@@ -85,8 +78,8 @@ function App() {
 
        
 
-        <Route exact path="/">
-          <Header />
+        <Route path="/">
+        
           <Home />
         </Route>
 
