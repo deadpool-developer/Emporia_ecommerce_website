@@ -52,6 +52,7 @@ export default function TemporaryDrawer() {
     >
       <List>
         {['MENS', 'WOMENS', 'KIDS', 'WOMENS EHNIC WEAR'].map((text, index) => (
+          
           <ListItem button key={text}>
            
             <ListItemText primary={text} />

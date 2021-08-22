@@ -39,7 +39,7 @@ const Clothing = () => {
         />
         <ClothingProduct
           id="1324324"
-          title="Wedding lehnga"
+          title="WestCoastOn Women's Silk Blend Semi-Stitched Lehenga Choli"
           size="1 Piece"
           image="https://rukminim1.flixcart.com/image/495/594/khtghow0-0/lehenga-choli/f/c/h/free-half-sleeve-kiyara-kedar-fab-original-imafxqtxcqe3zkyv.jpeg?q=50"
           rating={4}

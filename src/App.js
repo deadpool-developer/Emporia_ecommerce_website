@@ -31,12 +31,12 @@ function App() {
         </Route>
 
         <Route path="/gadgets">
-          <Header />
+         
           <Gadgets />
         </Route>
 
         <Route path="/furniture">
-          <Header />
+          
           <Furniture />
         </Route>
 

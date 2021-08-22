@@ -4,6 +4,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
+import Category from "./Category";
 
 
 
@@ -28,8 +29,12 @@ function Header() {
         <SearchIcon className="header__searchIcon" />
       </div>
 
+      <div className="header__option">
+       
+       <span className="header__optionLineTwo"><Category/></span>
+     </div>
 
-<Link to="/login">
+<Link to="/login" style={{textDecoration:"none"}}>
       <div className="header__nav">
           <div className="header__option">
               <span className="header__optionLineOne">
@@ -51,12 +56,9 @@ function Header() {
                   </span>
           </div> */}
 
-      <div className="header__option">
-        <span className="header__optionLineOne">Returns </span>
-        <span className="header__optionLineTwo">& Orders</span>
-      </div>
+      
 
-<Link to="/contact">
+<Link to="/contact" style={{textDecoration:"none"}}>
       <div className="header__option">
         <span className="header__optionLineOne">Contact</span>
         <span className="header__optionLineTwo">US</span>

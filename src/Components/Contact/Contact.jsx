@@ -1,8 +1,10 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import "./Contact.css";
+import myFunction from "./Alert";
 
 const Contact = () => {
+ 
   return (
     <>
       <div className="main_div">
@@ -15,12 +17,17 @@ const Contact = () => {
 
         <div className="contact_content">
           <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">
-                @
-              </span>
-            </div>
             <input
+            style={{ fontFamily: "inherit",
+            width: "100%",
+            border: "0",
+            borderBottom: "2px solid gray",
+            outline: "0",
+            fontSize: "1.3rem",
+            color: "black",
+            padding: "7px",
+            background: "transparent",
+            transition: "border-color 0.2s"}}
               type="text"
               class="form-control"
               placeholder="Username"
@@ -31,36 +38,56 @@ const Contact = () => {
 
           <div class="input-group mb-3">
             <input
+             style={{ fontFamily: "inherit",
+             width: "100%",
+             border: "0",
+             borderBottom: "2px solid gray",
+             outline: "0",
+             fontSize: "1.3rem",
+             color: "black",
+             padding: "7px",
+             background: "transparent",
+             transition: "border-color 0.2s"}}
               type="email"
               class="form-control"
               id="exampleFormControlInput1"
-              placeholder="name@example.com"
+              placeholder="Enter your Email"
             />
-
-            <div class="input-group-append">
-              <span class="input-group-text" id="basic-addon2">
-                @example.com
-              </span>
-            </div>
           </div>
 
           <div class="input-group mb-3">
             <input
-              type="number"
+           style={{ fontFamily: "inherit",
+            width: "100%",
+            border: "0",
+            borderBottom: "2px solid gray",
+            outline: "0",
+            fontSize: "1.3rem",
+            color: "black",
+            padding: "7px",
+            background: "transparent",
+            transition: "border-color 0.2s"}}
+              type="text  "
               class="form-control"
               id="exampleFormControlInput1"
               placeholder="Enter your contact number"
             />
 
-            <div class="input-group-append">
-              <span class="input-group-text" id="basic-addon2">
-                Mobile number
-              </span>
-            </div>
+            
           </div>
 
           <div class="mb-3">
             <textarea
+             style={{ fontFamily: "inherit",
+             width: "100%",
+             border: "0",
+             borderBottom: "2px solid gray",
+             outline: "0",
+             fontSize: "1.3rem",
+             color: "black",
+             padding: "7px",
+             background: "transparent",
+             transition: "border-color 0.2s"}}
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="2"
@@ -70,6 +97,16 @@ const Contact = () => {
 
           <div class="mb-3">
             <textarea
+             style={{ fontFamily: "inherit",
+             width: "100%",
+             border: "0",
+             borderBottom: "2px solid gray",
+             outline: "0",
+             fontSize: "1.3rem",
+             color: "black",
+             padding: "7px",
+             background: "transparent",
+             transition: "border-color 0.2s"}}
               class="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
@@ -83,8 +120,9 @@ const Contact = () => {
               color="primary"
               data-bs-toggle="tooltip"
               data-bs-placement="bottom"
-              title="Tooltip on bottom"
+              title="Submit"
               style={{ textAlign: "center", marginLeft: "240px" }}
+              onClick= {myFunction}
             >
               Submit
             </Button>

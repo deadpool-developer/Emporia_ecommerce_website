@@ -3,12 +3,12 @@
 }
 
 .main_div {
-  background-color: white;
+  background-color: burlywood;
   padding: 10px;
   margin: auto;
   margin-top: 20px;
   width: 600px;
-  height: 90vh;
+  height: 85vh;
   transform: perspective(800px);
 
   transition: transform 1s ease 0s;
@@ -25,3 +25,4 @@
 .contact_para {
   padding: 10px;
 }
+
