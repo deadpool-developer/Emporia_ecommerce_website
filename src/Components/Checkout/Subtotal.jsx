@@ -27,7 +27,7 @@ renderText = {(value) => (
     </>
 )}
 decimalScale = {2}
-value = {getBasketTotal(basket)}
+value = {getBasketTotal(basket.price)}
 displayType={"text"}
 thousandSeparator = {true}
 prefix = {"₹"}
