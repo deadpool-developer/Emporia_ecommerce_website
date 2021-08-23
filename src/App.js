@@ -71,7 +71,7 @@ function App() {
           <Clothing3/>
         </Route>
 
-        <Route exact path="/login">
+        <Route path="/login">
           <Login />
         </Route>
        

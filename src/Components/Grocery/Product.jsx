@@ -9,12 +9,15 @@ function GroceryProduct({id,title,image,price,rating,mrp,size}) {
   const addtoBasket = () => {
    dispatch ( {
      type: "ADD_TO_BASKET",
-     title:title,
-     image:image,
-     price:price,
-     rating:rating,
-     id:id,
-     mrp:mrp,
+     item: {
+      title:title,
+      image:image,
+      price:price,
+      rating:rating,
+      id:id,
+      mrp:mrp,
+     }
+   
    })
   }
   return (

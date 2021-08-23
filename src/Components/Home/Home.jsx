@@ -3,6 +3,7 @@ import "./Home.css";
 import Product from "./Product";
 import Button from '@material-ui/core/Button';
 import {Link } from "react-router-dom";
+import Footer from "./Footer";
 
 
 function Home() {
@@ -345,6 +346,8 @@ function Home() {
         </Button>
         </Link>
         </div><hr/>
+
+        <Footer/>
     </div> 
   );
 }
