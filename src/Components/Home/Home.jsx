@@ -1,6 +1,9 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
+import Button from '@material-ui/core/Button';
+import {Link } from "react-router-dom";
+
 
 function Home() {
   return (
@@ -30,7 +33,11 @@ function Home() {
           image="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBQSEREREhISERERERESERERERERERERFxMYGBgTFxcbICwkGx0pHhcXJTYlKS4wNDMzGiI5PjkyPSwyNDABCwsLEA4QGxISGjIgICAyMjIyMjIwMjIyMjIyMDAyMjIyMjIyMjIyMDIyMjAyMDIyMjAyMjIyMjIyMjIwMjIwMv/AABEIAOUA3QMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAACAAEDBQYEBwj/xABSEAACAQMAAwcMDwYEBQUAAAABAgADBBEFEiEGBzFBUWFxEyIyVHN0gZGTsbO0FBUWJDM0QlJVYnKSodHTI1ODssHSF4KUw2SEosLhJUNjo/H/xAAaAQACAwEBAAAAAAAAAAAAAAAAAgEDBAUG/8QAMhEAAgIBAwIBCgYDAQAAAAAAAAECEQMEEiExQVEFMmFxgZGxwdHwIjNSU3LhEyOhFP/aAAwDAQACEQMRAD8A9LOlqjVGVLZiFLBWarTQ1ApwWCZzq5zgnxST2dc9qjy9Oc+iPhCfquPFVYf0lwTGpUhOefQV3s+57UHl6cf2fc9qDy9OduuM4yM8mRmJjJonk4fbC57VXy9ON7YXHaw8uk6yYLGG1Ac3tjcdrL5dPyi9s6/a6eXX8pKxgEydqC2B7a1u118umPNM9fJd3t06U7qpYpQSmXFPUq51wSoAIwSTkljnAUADaTNA04tFjF1e89O0I5xquPODBxS6EWyu9zFxx6Vuz/AtP7IvcvX+lbr/AE9n/ZNPFFF3MzHuXr/St1/p7P8AsiO5av8ASt34Le0H/ZNPHEA3MzHuVr/S12ec0bQk9JKbZzX+gnt6b1q2mbilSQAs70bQKuTgfI2kkgADhmxlXuk0Gl/bPbO709ZkdKiYJR0bKtg8I5R5pFDJsoNGaFN1SWvb6aua1JsgOlC1xkcKkFMg8xE7PcnX+lrvyFp/ZO7cpudTR1u1FHaq1Sq9apUZQmtUZVU6qDsRhV2ZPGcy+Ak0MZQbk6/0rdf6ez/sj+5K4+lbr/T2f9k1gEeRRJkxuSr/AErdf6e0/sj+5K44tLXQ/gWn9k1YEKSBj7Kzu7O9tlq3tS7pXLvTAqIlMqVou5BC9aexQhgMjDDjm2lDphCbvRmBnVuK7NzL7FqjPjI8cvooCiiigAooooAZ/Q569v4vpnlNvmaaq2lopotqPVqCnrjslyrNkeBW8Or0G40Meufpq+meZHfkf3rbd9L6KrH7IXuzzEXtek61qdWorkB+qGt1RnGcZcZORtHWtwz3fcppNrmxt7ipgM6KzHPKobaeYEAnjxmfOzPgYE913uGzoq3zwagBzwYCKNsCTUJVDbVzs5QynxGMxnHo+/oVlZ7epTrIG1Wam4cBsA4PgII5QczpZoRuuQoTSNjEzQGaMFDMZyaJPvu9+xafyNJ2ac+h/jV79i0/kaQyGqRcR48UUqFiPiMBCgShRRSQCAwIEMCLEeA6EIgI4EbW5NvPwL4/ygSEBESBwyE1OfxbB4+HzR1VjwDH4f8A7Abb4lVppvfmi8ZHvm4B4Rn3pVmgmd0yuLvRQ/4i49UqzRRRRRRRQAUUUUAM3oY7W6a3pnmO352962vfQ9DVmv0OdtT7VX0zzF787+9bXvoeiqyyXQjuzyipQcU0qlSKbsyKx2Aup2qNu3Zg7J7hvcYOiaAbBUo4cNwFCuCDzYzPBW5Z7tvan/0q3B2gh9h4xnEhAWu5zRtra03S0DBWdWcuXLkhAEHXAHVC4xzcZloWkNKktMEINUE5O1iTswNpOeCItJRIbNALQGaAWkDUEzSLQnxu9+xa/wArRFoO5/4ze8ey28ziQRJcF6BHiiEDOFGAihAQGHAhARCMWxzniA4T/wCOeAwQEA1BxcA+VnCjw8fgnHWuxnV2Mfmg9aOk/K6OCSJQZ8M5wOIfkI23i3wU/wCdN7YLc/vuGKutsHXdPB4F/OTLRY7WPg4ZLTpheAQ4rl4F8LXVghAOAQoJizIHKPTvxzRXfFx6pVmgmf038b0V3zX9UqzQSCBRRRQAUUUUAMvok/CfbqemeYnfmBNrbMBsW5GTyE06mJs9Fn4TulX0zwdN6Np3lCpb1QTTcAHBwQQQwIPKCBL5Ijuz54e0IorWyoUsyY10Llhx6gOQuCNpHDme3b3mzRdqOPUP8xlFQ3r7dKgZ61R6YOeptq4PMSACRNzb0EpolOmoRKahUUcAA8554iQyJ2aAWgkwSYMlDsYJMYmCWkMcRaPue+MXvRb+Z5ETJdznw95/y/meKxMi4L+PGhASTOhAQgIxIAydgG0k7AByyi0tWu6oanQpmlTKkdXeolNmJHyV2sBzkAnmHCBKW1XV+hf3x7zur6UXqvsekQauqWdj2FFBjWZuXhAwOM7cTlau9ZilLW1flseybnY8Q5vFKjQWg2oXFarUcAVKC0tRW1gDkE6px1vYjlzs4MZOpoaqgKgCqOTzx1S6HPbyZ0lKW1d0uv8AH6vv24HsrJaYHym5eLwTtBkKtJBFbt2zfijGC2xVIIGPEIohoQgIsR4jACi04Pfei++q/qdaX8otO/G9F981vVK0vYECiiigAooooAZHRx+E7pW9NUnWWnFYnZU7pW9NUnSWmlkIRMYtBLQC0UcImCWgM0AtIGDYwSYJaAXitDIMmdG5r4a8/wCX/lY/1nEWnbuX+GvOi2/kaKJk800AEKNOTS9waVB2U4JwqnjGt8oc4GT4JKVukZMmSOOEpy6JW/YVmkNKO9Q0qGcIcO4GeuHDg8Axy8sKnbEnr21m5yYWhqKLTXAAzwSzpWxG3Zt5DLZVHhdjj4cWTUNZcjvdzXaK7KvEgp0AOKdCpiSakWJVZ1oY1EQMkBgqslAkWWpBAxa0YCORFLR8xtaNGkgU+mz760X31W9TrS+mf04wW50azEKouqxJJAAHsOtwmWaaRpNU6itQNUAyUXJKjlbA2DpkAdsUUUAFFFFADGWZ2P3St6apJi05rY4D91r+neGWmpoiIZaDrQC0AvIosRITALTkvUZ1AXGQ2drEDgI244eHmPGDkSCrQcl+uH7RlPZNs1WOMbPmkeKK/USd5MYmVoouChJBKuXPXNjB1c7MczY/ImAaD4xrDIYEdc23CEDOzjJGyRz4EplizSy3Kj9pdnlFuf8ApYf0mepIyvrEgjVAzk57FRjoyrHwzQ7kj1910UPM8WXQXJ0NIBKTdMSRSQAkEuSBt+aB5zLsCV2kjitbnGVPVQenrSPNGxOppnK8pQc9NKN1e1e+UUSWCA01xw4HDyzrCwBT5JIDFbsuxQ2RUWuVQ+Y+rHxHAi2ato2rEDHixICha0WYxEULRND5ijRQJKXdDq9W0cXGsgua5Zca2QLKueDj4JgdG7rqNtpFVSm5Sui0iW1KajBBD4GSTsOzlaeg6a23OjO+qvqdaeG7rrb2PdcBxQuHQ8rBKmcjpmzRYYZXKMutcFc200fSEU4NC3HVbahUzkvSQt9rVAYeMGd8xFgooooAYak2A3dK/p3iZ4AOw91uPTvI2abkuERDuSF4JeRF4JeG0ckLwC8jZ5GXhtGJC8FnkJeAzQ2k2Ss8vdxfZ3fTQ/kMzJaaTcOctd9ND+VpXlVRFyPg1c4tKLkU2+ax/Ef+J3Tm0guaZ5mU/jj+spg6kjDqY7sM16Phz8h7epkSfE4LY4MsV2iJJbWNp5b4ciWFBOyNrQ6l/QIxtaDmLMKIscmMIBaDrQoZMmzGghoQMKJKjTHxnRnfdX1OvPMd9qx1bmq3z1p1VHNjUY+MT0/TPxnRnfdX1OvMvvs2WtTo1ANhWpSduPg1qY8evNehntzx9PBXk82/AtN6y96rouiM5NItTPKSMEk/5i02U8m3kb3rbq3JzqkOq/NUHh8Jc/dnrMq1MNmWS9I6FFFFKCTz+ocKe6XHp3kDPJLhsL/FufTvOQvOlFcIWLDLQS0iLSMvGoeyUtALyIvAZ4UG4lLyMtALQS0naG4ItNRuDO276aH8rTJF5q9wJ23fTQ8zSnUKoe0Vy4NgJHcLlHHNs6QMiSR5iEq1XicVIcc6UecdLYMcmzwjZJEaPJWY8MqijrJgkwVePmJVGtSsYmFAhwJQJgQ2EExRkISVZCJIhk2MVWmfjWi++6vqVaQ7vrbqlhUbhNJqdVekNqnPNhj4pNpn41ovvut6nXlrpK26rQrUv3lKom3lZSB55MZbZKS7ENWjxHeyueoaXamdi1AydJzhR42E95nzalY22kraqo2h0A5NfOoCeYNg+CfR6MGAYbQwBB5jtE3+Uo/7FJd0Ji80OKKKc4sPN7xsL/FufTvOEtOq/brR3a79YeVxadaC/CilS6hs8AtBLQC0eidxIWgFoBaCWhRG4MtAJjFoJaTQrmGTNbuAO276aHmeY0tNhvenbefwPM8z6vzPb9SYytmzEKCIQnPHRwOuGcfWz49v9YhJa69fn5wHjGw+cRsQsyxVSa9IlhwIgYxalQcIGDmKK0WIPEBhHV47bZW3RYiMGTJIZIphY5V6Z+NaL77rep1poJntNfG9Fd9VvUq00MYh9T563xbQ0bqrjYUuCU5FRsOg8RE9r3JXgr2FrUByDSVQTwkL1oJ6QAfDPOt9+y/aGoB8JRVjzujFdn+XziX+89e9U0d1MnLUnIPMpyqjxJOnqfx6bHPw4+RTDhten+z0CKKKcwtPMNJnCju136dpVlpZaXPWju136dpUlp2cXmIybuWOTFmRloJaWULvJC0AtAJjZhQjmwiYsxopIu8WZsd7w7bz+B5nmOmv3uz1150W/wDuTLrPy/b9R8E7k/UbeFmAI4M5prRBdcKH6xU/5hs/EDxwcw7xc02xwgBl+0pBHmkZIOCOBgCOjGZDMuXiVoeATCZZGxjxD/JxyGGhhpzdUENWjSiEcyslMYPGDRmEqaNMXZLwwlM5lfEkDSl2maocor9Mn31orvuv6nWmima0t8b0T31cep1ppZYuhXLqYXfRsg9tSqauSjtT6BUXh8aDxzJ7yl4Vr3VudgYa3OX4h4AjeOelbsLbqlhcgHBWmXzyBOuJ+6DPF9xV17G01T2kCo+pyDDkZz/l1p1MH+zSzj4clL4n99v6PoSKKKcwtPLNN9ivdrn0zSmJlxp3sV7rdemaUpM7WHzEc3JKpMcmDmImNmXFLmPFGzGzIEeQKKDmLMkqllCmv3vD1159m3/3JjszX73p667+zb+epMus/L9v1LtFk3ZGvQ/kbcGOJGDDBnLOoGJX2nwYXjpM1M9Gdh8RE75xL1tw68VZAw+0gwfwx44rRTmjdP2e/p/1JHQJG6yRYRWEJUCW5FbWTBzGV8TuenkTlalNcZJrk5+bDKEriErSQNIqAwcGTNTxwSqdGzTTco2CwzGGyEI4lDXY6EZd0Vekz760T31cepVZqJl9KjF5onvq59TqzUSSX1I6tIOrI21WUqw5QRgz530rR6hd0WPWlKr03PGrU2BI5v2Z1dnL4Z9GTwnfRtTSuq2qAFNVaq5HCXXLHnGSQRzCbtDzNw8V8CrIunrPbrKv1SlTqcHVER8cmsoOPxnRMzvfXvV9G27E5ZV1W5j2QXwBgPBNNMUo7ZNeA6PK9PdiO63XpjKMmXe6HgHdLn0plETO1g/Lj99zjamW3I0OY0YmCTLqMUswWYswMx8SaM8s7HzFHCwwskpllYImv3vuyu/sW3nqzKBJq9wWx7zudt56sx638tetfM3eS5Xmf8X8UbMGEICmGDOWd9B5lZp4lUS4Ta1u4cgfuzsfwDYx5lMsIiMgggEEYIO0EHhBkBNboteIJqhlWohyrjI6DHSrKKzqewXNvVJ9h1H971W4KTH/ANpzxcxPD48W9WmVPNxSltrsU3Jc9PH1/R9UdSkGM9PM50eGK+JZCTY7nFr8QOpg7RJ9XZGFVTxiSAiE5EYYpN07TOZ0kYnY65nOySYO0a64KjSp996I76ufU6s1My2k/jmiO+rr1KrNTBghTy3ffsdbUqD5dConQUYNn/qAnqUyO+PaB7LXI+CqK5PIhBVvBtEv0s9uaL9Px4FyK4sz+8nfa1rWo5+DqawH2sliPGs9Onhu8/d9S0hVtzn9ojgDiUKcsekkIJ7lG1sduaXp5Gi7R5Vui7Fe6XPpjM+Wl/uh7Fe6XPpmlCBOlp/y199zzXlGdZ2gY+rCAhhZcc1yAAhhYSrJFSDZW5EarJAsNVhqkiytyACTS7iBipedztfPVlCqzQbjdlS87na/7sx6x3Bes6XkeV55fxfxia1DDEhUyRWnNZ6NBx4IMfMgtQ1amrqyOqujgq6OAysp4iDwysS3q2w1aetcW37hmzXoD/4nb4RfqsQRxMdgloTGJhVkuKZzWrJVUtSfIHZKQVZG+aynrlbmIg3FMjPCIVxaI7B8slRRhatM6tQDkJ4GX6rAjmji4qqMVEFZP3lLY4HK1Mnb0qST80RUtrszzwRlGuhVvXI45Na3xBwTsj1ranVyaLgsvZJghl5mQ9cp6RKqrTemdoOzjGDNO6GRV3PO5sOr0uTeuY+K5VGpWtkRmcTO0NJ42EzoXSAPHFjp5LsdvBr4zhdhaVPvzRHfV16nVmqmNuKutdaJP/FXPqdWbKVTVM6OOW6KYpX6atRWtq1M/KRsbNbDDapxx7QNksIxijnzpoK59jaXou2dUsC2DjW49UHB4WUbJ9GT5v3ZW3sa8yF2Ua7BQflBKmsPBwz6A0Hcira0KgOdakmTykDB/EGdHyjUtmT9SK8XSvvg853QcA7pcemMpQkt9M1v2lSi2VenWrdaUbJVnLAgY4CNuecSuFM8lT7j/lLcObHGCTkjz3lHTZp53KMG1wRgQwsMJ9VvuP8AlDAPzX+4/wCUt/8ARj/UjnPS6j9uXuBCw1WOPsP9xvyj631Knk2ivUY/1Iqemz/ty9zHVJIqwVf6j/cMMVfqP9wxHqMf6kVPTZ/25e5hBJdbkR+1vO52nnqymFX6rfcnRofTlC1rVvZL9QSutFUqVFITXp65Kts2ZBODwdaeaZ8+WMo0n3Ol5HwZYZ5OUGvwvqmu8TcQw0z43XaP7ftfLCF7rtH9vWvlVmQ9Ek/Avw0fXmfG67R/b9r5VYXuu0f2/a+VWFIsVl6Wi1pRe67R/b9r5VY3uu0f2/a+VWTQXIvhDEoBuv0f2/aeVWEN2Gj+37TyyyCUXVaglTBdFYr2LEdcv2W4V8EieyyMCpUA4g+Ko8bdefvSsG6/R3b9p5ZY/uv0d9IWnllkDoivdzbucpVpg86Oo/AmcPuYugetqW56WqL/ANstRuw0d9IWnlli92OjvpC08ss0R1OSKqzLPRYZO3D5FellVo3WilrFCxu7kjqbMRj2HV4cqJuphG0/bXmkNHJa1RXFCvVao6ZKL1S0rhVDHhPWnOODZyzdzPOTk7ZshBQiopUkKKKKKMeJ78Fjq3DPj4RKdUHi2DqbD8AfDNxvVX3VtF0tueps1Pbw7MEk9LFpW78mjWqWaXCAn2O5FQD904xrHoYL94ninNvHVGNpdKexSuoXpKZbzidDJJT0kXfMXX37GIlTZ6ayA8IB6QDOf2DS4epU88vU0/KKKc8cb2uo8PUaWTwnqabfwi9rKH7ij5JPyjRQAXtVb9r0fJU/yje1Nv2vQ8jT/KKKADe1Fv2vQ8jT/KL2otu1qHkaf5RRQAXtTb9r0PI0/wApnd0e4G1vmQsWoheGnSwtJmBOHKjGGwSMgjhiigBSNvQ2fzvwr/qyM709oOMHwXGz/wC6KKAER3qrTlHiuP1YJ3rLTlHiuP1YooARnextfq+K4/Vjf4ZWv1fFcfqxRQAb/DK1+r4rj9WL/DK1+r4rj9WKKADjeytfq+K4/Vkg3rbTm8Vx+tGigBKN6u0PJ04uP1ZKm9HaHjHir/qxRQAvtzO4K30fV6rTeox4kJ6wMQV1tuSSFZgNvyjzY2EUUAFFFFACGtSV1ZHUOjgqysAysp2EEHhBHFK/c7oSnY0no0dlM1qtVRqgaoqMW1BjiGcDmAiikAf/2Q=="
           rating={4}
         />
+        
       </div>
+      <div className="home__seeMore">
+          <Button href="/gadgets" variant="contained" color="primary">see more</Button>
+        </div>
 
       <div className="home__row">
         <Product
@@ -58,6 +65,9 @@ function Home() {
           rating={4}
         />
       </div>
+      <div className="home__seeMore">
+          <Button href="/gadgets" variant="contained" color="primary">see more</Button>
+        </div>
 
       <div className="home__row">
         <Product
@@ -69,6 +79,9 @@ function Home() {
           rating={5}
         />
       </div>
+      <div className="home__seeMore">
+          <Button href="/gadgets" variant="contained" color="primary">see more</Button>
+        </div>
 
       
       <div className="home__row">
@@ -100,6 +113,9 @@ function Home() {
          price={1460}
         />
       </div>
+      <div className="home__seeMore">
+          <Button href="/clothing" variant="contained" color="primary">see more</Button>
+        </div>
 
       <div className="home__row">
         <Product
@@ -140,6 +156,9 @@ function Home() {
         />
         
       </div>
+      <div className="home__seeMore">
+          <Button href="/grocery" variant="contained" color="primary">see more</Button>
+        </div>
 
       <div className="home__row">
         <Product
@@ -189,6 +208,9 @@ function Home() {
         />
         
       </div>
+      <div className="home__seeMore">
+          <Button href="/furniture" variant="contained" color="primary">see more</Button>
+        </div>
 
       <div className="home__row">
       
@@ -222,6 +244,9 @@ function Home() {
         />
         
       </div>
+      <div className="home__seeMore">
+          <Button href="/clothing3" variant="contained" color="primary">see more</Button>
+        </div>
 
       <div className="home__row">
         <Product
@@ -245,6 +270,9 @@ function Home() {
         />
 
       </div>
+      <div className="home__seeMore">
+          <Button href="/gadgets" variant="contained" color="primary">see more</Button>
+        </div>
 
       <div className="home__row">
         <Product
@@ -293,7 +321,31 @@ function Home() {
         price={670}
         />
       </div>
-    </div>
+      <div className="home__seeMore">
+          <Button href="/clothing2" variant="contained" color="primary">see more</Button>
+        </div><hr/>
+        <div className="home__footersignin">
+          <p>See personalized recommendations</p>
+          <Link to="/login" style={{textDecoration:"none"}}>
+          <Button
+          variant="contained"
+          color="secondary"
+          style={{
+            backgroundColor: "#cd9042",
+            width: "10%",
+            height: "30px",
+            fontWeight: "500",
+            fontSize: "15px",
+            borderRadius: "10px",
+           
+            
+          }}
+        >
+          SIGN IN
+        </Button>
+        </Link>
+        </div><hr/>
+    </div> 
   );
 }
 

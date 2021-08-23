@@ -69,11 +69,13 @@ const Login = () => {
     <>
       <div className="Login">
         <img
-          src="https://cdn.iconscout.com/icon/free/png-256/amazon-1869030-1583154.png"
-          alt=""
+          // src="https://cdn.iconscout.com/icon/free/png-256/amazon-1869030-1583154.png"
+         src={"./logo1.png"}
+         alt=""
           className="login_Logo"
         />
       </div>
+      
 
       <div className="Login_div">
         <h4 style={{ textAlign: "center", fontWeight: "bold" }}>Sign-in</h4>
