@@ -5,9 +5,21 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 1500px;
+    
     /* justify-content: space-evenly; */
 }
 
+.Footer{
+  background-color: black;
+}
+
+.footer-copyright{
+  color: blanchedalmond;
+}
+
+.title{
+  color: blanchedalmond;
+}
 .footer__card{
     
   box-shadow:
@@ -17,8 +29,7 @@
     rgba(0, 0, 0, 0.1) 0px 20px 30px 0px; 
     display: flex;
     z-index: 1;
-    margin-left: 5px;
-    margin-right: 5px;
+  
 
     
 }
@@ -28,4 +39,5 @@
     width: 100%;
     object-fit: contain;
     margin-bottom: 15px;
+    margin-top: 50px;
    }

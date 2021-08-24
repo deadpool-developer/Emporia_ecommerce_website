@@ -1,6 +1,7 @@
 import React from "react";
 import "./gadgets.css";
 import GadgetsProduct from "./Product";
+import Footer from "../Home/Footer";
 
 function Gadgets() {
   return (
@@ -230,6 +231,7 @@ function Gadgets() {
         mrp={2999.00}
         price={2549.00}/>
     </div>
+    <Footer/>
   </div>
   );
 }

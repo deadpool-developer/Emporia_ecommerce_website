@@ -1,29 +1,36 @@
 import React from "react";
 import "./product.css";
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import { Link } from "react-router-dom";
 
-
-function Card({title,image,ig,linkedin,facebook,github}) {
+function Card({ title, image }) {
   return (
     <div className="product">
-          <img
-        src={image}
-        alt=""
-      />
+      <img src={image} alt="" />
       <div className="product__info">
-        <p>{title}</p>
-      <GitHubIcon />
-    <LinkedInIcon href={linkedin}/>
-    <InstagramIcon/>
-    <FacebookIcon href= {facebook}/>
-    
+        <h5>{title}</h5>
+        <Link
+          to={{ pathname: "https://github.com/deadpool-developer" }}
+          target="_blank"
+        >
+          
+          <GitHubIcon />
+        </Link>
+        <Link
+          to={{ pathname: "www.linkedin.com/in/aditya-saini-286aa2182" }}
+          target="_blank"
+        >
+          <LinkedInIcon />
+        </Link>
+        <Link
+          to={{ pathname: "https://www.instagram.com/adityasaini_025/" }}
+          target="_blank"
+        >
+          <InstagramIcon />
+        </Link>
       </div>
-
-    
-      
     </div>
   );
 }

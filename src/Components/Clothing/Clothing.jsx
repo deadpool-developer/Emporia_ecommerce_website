@@ -2,6 +2,7 @@ import React from "react";
 import TemporaryDrawer from "./Drawer";
 import ClothingProduct from "./ClothingProduct";
 import PaginationFashion from "./pages";
+import Footer from "../Home/Footer";
 
 const Clothing = () => {
   return (
@@ -235,6 +236,7 @@ const Clothing = () => {
       </div>
 
       <PaginationFashion />
+      <Footer/>
     </>
   );
 };

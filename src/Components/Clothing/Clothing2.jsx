@@ -1,5 +1,5 @@
 import React from "react";
-
+import Footer from "../Home/Footer";
 import TemporaryDrawer from "./Drawer";
 import ClothingProduct from "./ClothingProduct";
 import PaginationFashion from "./pages";
@@ -168,6 +168,7 @@ const Clothing = () => {
       </div>
 
       <PaginationFashion />
+      <Footer/>
     </>
   );
 };

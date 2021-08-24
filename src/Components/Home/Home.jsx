@@ -345,7 +345,7 @@ function Home() {
           SIGN IN
         </Button>
         </Link>
-        </div><hr/>
+        </div>
 
         <Footer/>
     </div> 

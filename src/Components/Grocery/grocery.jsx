@@ -2,6 +2,7 @@ import React from "react";
 import "./grocery.css";
 import GroceryProduct from "./Product";
 import Pagination from "./page";
+import Footer from "../Home/Footer";
 
 function Grocery() {
   return (
@@ -223,6 +224,7 @@ function Grocery() {
         />
       </div>
       <Pagination/>
+      <Footer/>
     </div>
   );
 }

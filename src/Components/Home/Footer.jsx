@@ -5,47 +5,40 @@ import "./Footer.css"
 
 const Footer = () => {
   return (
-    <MDBFooter className="Footer" color="blue" className="font-small pt-6 mt-6">
-      <MDBContainer fluid className="text-center text-md-left">
+  <MDBFooter  className="font-small pt-6 mt-6 Footer" >
+      <MDBContainer fluid className="text-center text-md-left"> 
+       <hr/>
+      <h5 className="title">TEAM MEMBERS</h5>
        
-          <MDBCol md="12" className="footer">
+          <MDBCol md="8" className="footer">
           <div className="home__row">
               <ImgMediaCard 
+              
               title= "Aditya Saini"
+             image= {"./logo2.jpg"}
               />
-              <ImgMediaCard/>
-              <ImgMediaCard/>
+              <ImgMediaCard
+              
+              title= "Nikita Gupta"
+              image ={"./logo3.jpg"}
+              />
+              <ImgMediaCard
+              title= "Kashish Tibrewal"
+              image= {"./logo4.jpg"}
+              />
               </div>
 
 
 
-            {/* <h5 className="title">Footer Content</h5> */}
+            
             
 
           </MDBCol >
-         
-          {/* <MDBCol md="6">
-            <h5 className="title">Links</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">Link 1</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 2</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 3</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-          </MDBCol> */}
         
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.mdbootstrap.com"> MDBootstrap.com </a>
+          &copy; {new Date().getFullYear()} Copyright: <strong>CODING CREATURES</strong>
         </MDBContainer>
       </div>
     </MDBFooter>

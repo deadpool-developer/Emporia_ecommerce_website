@@ -1,6 +1,7 @@
 import React from "react";
 import "./furniture.css";
 import FurnitureProduct from "./Product";
+import Footer from "../Home/Footer";
 
 function Furniture() {
   return (
@@ -233,6 +234,7 @@ function Furniture() {
           price={4199.00}
         />
     </div>
+    <Footer/>
 </div>
   );
 }
